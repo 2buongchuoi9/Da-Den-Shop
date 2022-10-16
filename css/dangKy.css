@@ -1,0 +1,67 @@
+.tai_khoan{
+    /* display: flex; */
+    width: 100%;
+}
+.dn{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+}
+.dk{
+    border-bottom: 1px solid red;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+}
+.tai_khoan label, .tai_khoan input{
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.fb-gg{
+    display: flex;
+    justify-content: center;
+}
+.fb-gg a{
+    width: 30%;
+    margin: 20px 0;
+}
+.dn-dn{
+    width: 530px;
+    display: flex;
+    text-align: center;
+    margin: 20px 0  ;
+}
+.dn-dn a:first-child{
+    color: white;
+    background-color: black;
+    width: 30%;
+    padding: 15px;
+}
+.dn-dn a{
+    width: max-content;
+    padding: 15px;
+    color: black;
+}
+.dn-dn a:first-child:hover{
+    background-color: red;
+}
+.dn-dn a:last-child:hover{
+    color: orange;
+}
+.dn-dn a:only-child:hover{
+    color: white;
+}
+.dn>p{
+    margin: 20px 0;
+}

@@ -1,0 +1,39 @@
+.lh{
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+.lh-tt{
+    display: block;
+    width: 40%;
+    margin: 0 2.5%;
+}
+.lh-map{
+    width: 95%;
+    margin: 20px auto;
+}
+label, input, textarea{
+    width: 100%;
+}
+.lh p{
+    width: max-content;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+.lh p:hover{
+    background-color: black;
+}
+.lh-tt label{
+    margin-bottom: 20px;
+}
+.lh-tt input, .lh-tt textarea{
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #55595c;
+    /* margin: 0; */
+}

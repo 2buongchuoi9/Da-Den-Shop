@@ -1,0 +1,98 @@
+.gh{
+    /* display: flex; */
+    width: 100%;
+    /* border-bottom: 1px solid rgb(115, 115, 115); */
+
+}
+.gh-hinh>img{
+    width: 100%;
+}
+td{
+    width: 16.66666666%;
+
+}
+.gh-hinh, .gh-chu, .gh-tien, .gh-nut , .gh-xoa{
+    /* width: 16.66666666%; */
+    /* margin: auto; */
+    /* border: 1px solid rgb(115, 115, 115); */
+    /* text-align: center; */
+}
+.gh-chu p, .gh-tien p, .gh-nut input, .gh-xoa a{
+    /* vertical-align: middle; */
+    /* margin: 50px 0; */
+}
+.gh-xoa>a>i{
+    font-size: 25px;
+    color: black;
+}
+.gh-xoa:hover>a>i{
+    color: red;
+}
+ td{
+    border: 1px solid rgb(239, 231, 231);
+    margin: 10px;
+}
+.gh>table tr:first-child td{
+    border: none;
+    /* margin: 20px; */
+}
+.gh>table tr:first-child{
+    padding-bottom: 20px;
+}
+.gh-tong{
+    display: flex;
+    width: 100%;
+}
+.tong-1{
+    width: 66.66666%;
+    text-align: right;
+    border: 1px solid rgb(239, 231, 231);
+    padding: 10px;
+}
+.tong-2{
+    width: 33.33333%;
+    text-align: right;
+    border: 1px solid rgb(239, 231, 231);
+    padding: 10px;
+}
+.gh-tt{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+}
+.gh-tien>p, .gh-tong>p:last-child{
+    color: red;
+}
+.gh-tt-mua{
+    width: max-content;
+    border: 1px solid rgb(71, 71, 71);
+    padding: 10px;
+    margin-top: 10px;
+}
+.gh-tt-mua a{
+    color: black;
+}
+.gh-tt-mua:hover{
+    background-color: red;
+    border: 1px solid red;
+}
+.gh-tt-mua:hover a{
+    color: white;
+}
+.gh-tt-tt{
+    width: max-content;
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: red;
+}
+.gh-tt-tt a{
+    color: white;
+}
+.gh-tt-tt:hover{
+    background-color: white;
+}
+.gh-tt-tt:hover a{
+    color: black;
+}

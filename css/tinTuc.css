@@ -1,0 +1,76 @@
+.tinTuc{
+    width: 100%;
+    /* margin: 10px 5%; */
+    display: flex;
+    line-height: 2.0;
+    margin: 30px 0;
+}
+.tt-hinh{
+    width: 40%;
+    overflow: hidden;
+}
+.tt-hinh>a{
+    width: 100%;
+}
+.tt-hinh>a>img{
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+}
+.tt-hinh>a>img:hover{
+    transform: scale(1.1);
+}
+.tt-nd{
+    width: 65%;
+    margin: 0 2.5%;
+    text-align: left;
+    display: block;
+}.tt-nd p{
+    line-height: 1.5;
+    font-size: 14px;
+}
+.tt-nd span{
+    margin-right: 15px;
+}
+.docThem a{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.docThem a:hover{
+    background-color: rgb(38, 38, 38);
+}
+.docThem{
+    margin: 10px 0;
+}
+
+@media only screen and (max-width: 1000px){
+    .can{
+        width: 1000px;
+        text-align: left;
+        margin: 0;
+    }
+ .tinTuc{
+    display: block;
+    width: 100%;
+ }
+ .tt-nd, .tt-hinh{
+    width: 100%;
+ }
+    
+}
+@media only screen and (max-width: 480px){
+    .an{
+        width: 480px;
+        text-align: left;
+        margin: 0;
+    }
+    .tinTuc{
+        display: block;
+        width: 100%;
+     }
+     .tt-nd, .tt-hinh{
+        width: 100%;
+     }
+}

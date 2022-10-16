@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Giỏ Hàng</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/gioHang.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather&family=Ms+Madi&display=swap"
+            rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
+        <script src="https://uhchat.net/code.php?f=de70d1"></script>
+
+        <script>
+            // tạo icon hiện mũi tên list danh dách
+            $(document).ready(function(){
+                $('.sub-bar').parent('li').addClass('down');
+                $('.sub-menu').parent('li').addClass('muiTen');
+                // $('li.down').click(function(){
+                //     $('.sub-bar').slideToggle();
+                // });
+
+            });
+            // tạo header cố định trên đầu
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    if($(this).scrollTop()){
+                        $('header').addClass('coDinh');
+                        $('.back-top').fadeIn();
+                    }else{
+                        $('header').removeClass('coDinh');
+                        $('.back-top').fadeOut();
+                    }
+                });
+                // trở về đầu trang
+                $('.back-top').click(function(){
+                    $('html, body').animate({scrollTop: 0}, 500);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="can">
+            <div class="header-first">
+                <div class="logo"><a href=""><img
+                            src="hinh/icon/dadenshopden.png"
+                            alt=""></a></div>
+                <div class="timKim">
+                    <div>
+                        <input type="text" placeholder="Tìm kiếm ...">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <!-- <input type="submit" value="Tìm kiếm"> -->
+                    </div>
+                </div>
+                <ul class="taiKhoan">
+                    <li><a href="dangNhap.html"><i class="fa-solid
+                                fa-circle-user"></i></a></li>
+                    <ul>
+                        <li><a href="dangNhap.html">Đăng nhập</a></li>/
+                        <li><a href="dangKi.html">Đăng ký</a></li>
+                    </ul>
+                </ul>
+                <ul class="taiKhoan">
+                    <li><a href="gioHang.html"><i class="fa-solid
+                                fa-cart-shopping"></i></a></li>
+                    <li><a href="gioHang.html">Giỏ hàng</a></li>
+                </ul>
+            </div>
+            <header>
+                <div id="dau">
+                    <div class="logo">
+                        <!-- <a href=""><img
+                                src="hinh/icon/logoFPT.png"
+                                alt=""></a> -->
+                        <a href=""><img
+                                src="hinh/icon/dadenshoptrang.png"
+                                alt=""></a>
+                    </div>
+                    <ul id="menu">
+                        <!-- <i class="fa-solid fa-caret-right"></i> -->
+                        <li><a href=""><i class="fa-solid fa-house"></i></a><a
+                                href="index.html">Trang chủ</a></li>
+                        <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                        <li><a href="sanPham.html">Sản phẩm</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Bộ sưu tập mới</a></li>
+                                <li><a href="">Giày thời trang nam</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="sanPham.html">Giày da</a></li>
+                                        <li><a href="sanPham.html">Giày vải</a></li>
+                                        <li><a href="sanPham.html">Conver</a></li>
+                                        <li><a href="sanPham.html">Giày Vans</a></li>
+                                        <li><a href="sanPham.html">Giày laconste</a></li>
+                                        <li><a href="sanPham.html">Giày D&G</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Giày thời trang nữ</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="sanPham.html">Giày da</a></li>
+                                        <li><a href="sanPham.html">Giày vải</a></li>
+                                        <li><a href="sanPham.html">Conver</a></li>
+                                        <li><a href="sanPham.html">Giày Vans</a></li>
+                                        <li><a href="sanPham.html">Giày laconste</a></li>
+                                        <li><a href="sanPham.html">Giày D&G</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="sanPham.html">Giày mùa hè</a></li>
+                                <li><a href="sanPham.html">Giày công sở</a></li>
+                                <li><a href="sanPham.html">Giày thể thao</a></li>
+                                <li><a href="sanPham.html">Giày đi chơi</a></li>
+                                <li><a href="sanPham.html">Giày trẻ em</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="tinTuc.html">Tin tức</a>
+                            <ul class="sub-menu">
+                                <li><a href="tinTuc.html">Tin tức khuyến mãi</a></li>
+                                <li><a href="tinTuc.html">Tin tức giày</a></li>
+                                <li><a href="tinTuc.html">Thời trang & cuộc sống</a></li>
+                                <li><a href="tinTuc.html">Xu hướng thời trang</a></li>
+                                <li><a href="tinTuc.html">Đẹp + giày</a></li>
+                                <li><a href="tinTuc.html">Tin thương hiệu</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="lienHe.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+
+            </header>
+            <div id="banner">
+                <!-- <div>
+                    <img src="hinh/slider_3_image.jpg" alt="">
+
+                </div> -->
+            </div>
+
+            <div id="wp-content">
+                <div id="sidebar">
+                    <div class="list">
+                        <div class="tieuDe"><h3>DANH MỤC SẢN PHẨM</h3></div>
+                        <div class="list-nd">
+                            <ul class="bar">
+                                <li><i id="button-1" class="fa-solid
+                                        fa-caret-down"></i><a href="">Bộ sưu tập
+                                        mới</a>
+                                    <ul id="sub-bar-1" class="sub-bar">
+                                        <li><a href="">Bộ sưu tập mùa Xuân</a></li>
+                                        <li><a href="">Bộ sưu tập mùa Hè</a></li>
+                                        <li><a href="">Bộ sưu tập mùa Thu</a></li>
+                                        <li><a href="">Bộ sưu tập mùa Đông</a></li>
+                                    </ul>
+                                    <script>
+                                        document.getElementById("button-1").onclick = function() {myFunction1()};
+                                        function myFunction1() {
+                                        document.getElementById("sub-bar-1").classList.toggle("show-1");
+    
+                                        }
+                                    </script>
+                                    <!--  -->
+                                </li>
+                                <li><i id="button-2" class="fa-solid
+                                        fa-caret-down"></i><a href="">Giày thời
+                                        trang nam</a>
+                                    <ul id="sub-bar-2" class="sub-bar">
+                                        <li><a href="">Giày da</a></li>
+                                        <li><a href="">Giày vải</a></li>
+                                        <li><a href="">Conver</a></li>
+                                        <li><a href="">Giày Vans</a></li>
+                                        <li><a href="">Giày laconste</a></li>
+                                        <li><a href="">Giày D&G</a></li>
+                                    </ul>
+                                    <script>
+                                        document.getElementById("button-2").onclick = function() {myFunction2()};
+                                        function myFunction2() {
+                                        document.getElementById("sub-bar-2").classList.toggle("show-1");
+    
+                                        }
+                                    </script>
+                                    <!--  -->
+                                </li>
+                                <li><i id="button-3" class="fa-solid
+                                        fa-caret-down"></i><a href="">Giày thời
+                                        trang nữ</a>
+                                    <ul id="sub-bar-3" class="sub-bar">
+                                        <li><a href="">Giày da</a></li>
+                                        <li><a href="">Giày vải</a></li>
+                                        <li><a href="">Conver</a></li>
+                                        <li><a href="">Giày Vans</a></li>
+                                        <li><a href="">Giày laconste</a></li>
+                                        <li><a href="">Giày D&G</a></li>
+                                    </ul>
+                                    <script>
+                                        document.getElementById("button-3").onclick = function() {myFunction3()};
+                                        function myFunction3() {
+                                        document.getElementById("sub-bar-3").classList.toggle("show-1");
+    
+                                        }
+                                    </script>
+                                    <!--  -->
+                                </li>
+                                <li><i id="button-4" class="fa-solid
+                                        fa-caret-down"></i><a href="">Giày công
+                                        sở</a>
+                                    <ul id="sub-bar-4" class="sub-bar">
+                                        <li><a href="">Giày da</a></li>
+                                        <li><a href="">Giày vải</a></li>
+                                        <li><a href="">Conver</a></li>
+                                        <li><a href="">Giày Vans</a></li>
+                                        <li><a href="">Giày laconste</a></li>
+                                        <li><a href="">Giày D&G</a></li>
+                                    </ul>
+                                    <script>
+                                        document.getElementById("button-4").onclick = function() {myFunction4()};
+                                        function myFunction4() {
+                                        document.getElementById("sub-bar-4").classList.toggle("show-1");
+    
+                                        }
+                                    </script>
+                                    <!--  -->
+                                </li>
+                                <li><i id="button-5" class="fa-solid
+                                        fa-caret-down"></i><a href="">Giày thể
+                                        thao</a>
+                                    <ul id="sub-bar-5" class="sub-bar">
+                                        <li><a href="">Giày da</a></li>
+                                        <li><a href="">Giày vải</a></li>
+                                        <li><a href="">Conver</a></li>
+                                        <li><a href="">Giày Vans</a></li>
+                                        <li><a href="">Giày laconste</a></li>
+                                        <li><a href="">Giày D&G</a></li>
+                                    </ul>
+                                    <script>
+                                        document.getElementById("button-5").onclick = function() {myFunction5()};
+                                        function myFunction5() {
+                                        document.getElementById("sub-bar-5").classList.toggle("show-1");
+    
+                                        }
+                                    </script>
+                                    <!--  -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="hinh-list">
+                        <a href=""><img
+                                src="hinh/index_sidebar_banner_image.webp"
+                                alt=""></a>
+                    </div> -->
+                    <div class="list">
+                        <div class="tieuDe"><h3>SẢN PHẨM NỔI BẬT</h3></div>
+                        <div class="list-nd">
+                            <div class="sanPham-list">
+                                <div class="hinh-list-nho">
+                                    <img src="hinh/giay/conver3.png"
+                                        alt="">
+                                </div>
+                                <div class="chu-list">
+                                    <div class="ten-list">
+                                        <a href="">Giày thể thao Converse 4</a>
+                                    </div>
+                                    <div class="tien-list">
+                                        <p>600,000₫ <del>900.000₫</del></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sanPham-list">
+                                <div class="hinh-list-nho">
+                                    <img src="hinh/giay/conver8.png"
+                                        alt="">
+                                </div>
+                                <div class="chu-list">
+                                    <div class="ten-list">
+                                        <a href="">Giày Converse Star Collar
+                                            Break</a>
+                                    </div>
+                                    <div class="tien-list">
+                                        <p>480,000₫ <del>500.000₫</del></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sanPham-list">
+                                <div class="hinh-list-nho">
+                                    <img src="hinh/giay/giay4.png"
+                                        alt="">
+                                </div>
+                                <div class="chu-list">
+                                    <div class="ten-list">
+                                        <a href="">Giày Converse Camo Americana</a>
+                                    </div>
+                                    <div class="tien-list">
+                                        <p>1.200,000₫ <del>1.400.000₫</del></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hinh-list" title="em gớ xin tươi với đồi giày
+                        nice">
+                        <a href=""><img
+                                src="hinh/Nike-Jordan (1).png"
+                                alt=""></a>
+                    </div>
+                    <div class="list" title="Hãy liên hệ đến Da Đen shop để được
+                        hỗ
+                        trợ bạn nhé">
+                        <div class="tieuDe"><h3>HỖ TRỢ TRỰC TUYẾN</h3></div>
+                        <div class="list-nd">
+                            <div class="item">
+                                <div class="item-icon">
+                                    <img
+                                        src="hinh/icon/item_1_image.webp"
+                                        alt="">
+                                </div>
+                                <div class="chu">
+                                    <h4>Tư vấn bán hàng 1</h4>
+                                    <p>Mr. Da Đen: 0936631402</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-icon">
+                                    <img
+                                        src="hinh/icon/item_1_image.webp"
+                                        alt="">
+                                </div>
+                                <div class="chu">
+                                    <h4>Tư vấn bán hàng 2</h4>
+                                    <p>Mr. Dũng: 0924233993</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-icon">
+                                    <img
+                                        src="hinh/icon/item_3_image.webp"
+                                        alt="">
+                                </div>
+                                <div class="chu">
+                                    <h4>Email hỗ trợ</h4>
+                                    <p>DaDen123@gmail.com</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+
+                    <div class="content-1">
+                        <div class="tieuDe">
+                            <a href=""><h2>GIỎ HÀNG</h2></a>
+                        </div>
+                        <div class="gh">
+                            <table>
+                                <tr>
+                                    <td>Hình ảnh</td>
+                                    <td>Sản phẩm</td>
+                                    <td>Giá</td>
+                                    <td>Số lượng</td>
+                                    <td>Thành tiền</td>
+                                    <td>Xóa</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="gh-hinh">
+                                            <img src="hinh/giay/giay4.png"
+                                                alt="">
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-chu">
+                                            <p>Converse Star Eyerow Cut Out</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-tien">
+                                            <p>400.000₫</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-nut">
+                                            <input type="number" min="0"
+                                                max="10" value="1">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="gh-tien">
+                                            <p>400.000₫</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-xoa">
+                                            <a href=""><i class="fa-solid
+                                                    fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="gh-hinh">
+                                            <img src="hinh/giay/conver3.png"
+                                                alt="">
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-chu">
+                                            <p>Giày Converse Madison Mono Đỏ</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-tien">
+                                            <p>400.000₫</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-nut">
+                                            <input type="number" min="0"
+                                                max="10" value="1">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="gh-tien">
+                                            <p>400.000₫</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-xoa">
+                                            <a href=""><i class="fa-solid
+                                                    fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="gh-hinh">
+                                            <img src="hinh/giay/giay1.png"
+                                                alt="">
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-chu">
+                                            <p>Giày Converse Star Dainty</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-tien">
+                                            <p>400.000₫</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-nut">
+                                            <input type="number" min="0"
+                                                max="10" value="1">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="gh-tien">
+                                            <p>400.000₫</p>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="gh-xoa">
+                                            <a href=""><i class="fa-solid
+                                                    fa-trash-can"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="gh-tong">
+                                <p class="tong-1">Tổng tiền: </p>
+                                <p class="tong-2">1.200.000₫</p>
+                            </div>
+                            <div class="gh-tt">
+                                <div class="gh-tt-mua">
+                                    <a href="sanPham.html">Tiếp tục mua hàng</a>
+                                </div>
+                                <div class="gh-tt-tt">
+                                    <a href="">TIẾN HÀNH THANH TOÁN</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <footer>
+                <div id="end">
+                    <div id="bottom">
+                        <div class="cot">
+                            <div class="logo-duoi">
+                                <!-- <a href=""><img src="hinh/icon/logotrang.png"
+                                        alt=""></a> -->
+                                <a href=""><img
+                                        src="hinh/icon/dadenshoptrang.png"
+                                        alt=""></a>
+                            </div>
+
+                            <div id="logo-bottom">
+                                <a href=""><img
+                                        src="hinh/icon/ico-fb.png"
+                                        alt=""></a>
+                                <a href=""><img
+                                        src="hinh/icon/ico-youtube.webp"
+                                        alt=""></a>
+                                <a href=""><img
+                                        src="hinh/icon/icon-tiktok.webp"
+                                        alt=""></a>
+                                <a href=""><img
+                                        src="hinh/icon/ico-wiki.webp"
+                                        alt=""></a>
+
+                            </div>
+                            <div class="chu-bottom">
+                                <h2>Thông tin liên hệ</h2>
+                                <p>Điện thoại: 0936631402</p>
+                                <p>Email: DaDenShop123@gmail.com</p>
+                            </div>
+                            <div class="inline"><hr></div>
+                        </div>
+                        <div class="cot">
+                            <div><h2>Hỗ trợ khách hàng</h2></div>
+                            <div class="chu-bottom">
+                                <p><a href="index.html">Trang chủ</a></p>
+                                <p><a href="GioiThieu.html">Giới thiệu</a></p>
+                                <p><a href="sanPham.html">Sản phẩm</a></p>
+                                <p><a href="tinTuc.html">Tin tức</a></p>
+                                <p><a href="lienHe.html">Liên hệ</a></p>
+                            </div>
+                            <div><h2>Hỗ trợ thanh toán</h2></div>
+                            <div class="thanhtoan">
+                                <img src="hinh/icon/payment_1_image.webp"
+                                    alt="">
+                                <img src="hinh/icon/payment_2_image.webp"
+                                    alt="">
+                                <img src="hinh/icon/payment_3_image.webp"
+                                    alt="">
+                                <img src="hinh/icon/payment_4_image.webp"
+                                    alt="">
+                                <img src="hinh/icon/payment_5_image.webp"
+                                    alt="">
+                            </div>
+                            <div class="inline"><hr></div>
+                        </div>
+                        <div class="cot">
+                            <div><h2>Góc tư vấn</h2></div>
+                            <div class="chu-bottom">
+                                <p>Để lại thông tin để Được Da Đen shop tư vấn
+                                    miễn
+                                    phí!!!</p>
+                                <div>
+                                    <select class="nhap" name="your-topic"
+                                        aria-required="true"
+                                        aria-invalid="false">
+                                        <option value="Dịch vụ">Giày</option>
+                                        <option value="Dịch vụ">Giày nam</option>
+                                        <option value="Dịch vụ">Giày nữ</option>
+                                        <option value="Dịch vụ">Giày mùa hè</option>
+                                        <option value="Dịch vụ">Giày công sở</option>
+                                        <option value="Dịch vụ">Giày trẻ em</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="text" class="nhap" value
+                                        size="40"
+                                        placeholder="Họ tên"
+                                        aria-invalid="false"
+                                        aria-required="true">
+                                </div>
+                                <div>
+                                    <input type="text" class="nhap" value
+                                        size="40"
+                                        placeholder="Số điện thoại"
+                                        aria-invalid="false"
+                                        aria-required="true">
+                                </div>
+                                <div>
+                                    <input class="nhap" id="nut" type="submit"
+                                        value="Gửi yêu cầu">
+                                </div>
+                            </div>
+                            <div class="inline"><hr></div>
+                        </div>
+                    </div>
+                    <div id="the-end">
+                        <p>Copyright &CounterClockwiseContourIntegral; 2022
+                            &copysr;
+                            Bản
+                            quyền thuộc về ANH DA ĐEN.</p>
+                        <p></p>
+                    </div>
+                    <div class="back-top">
+                        <i class="fas fa-chevron-up" style="width: auto;"></i>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
+        <!-- kết thúc phần thân -->
+
+    </body>
+</html>
