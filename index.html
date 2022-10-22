@@ -134,9 +134,9 @@
             <div id="banner">
                 <div>
                     <img src="hinh/slider_3_image.jpg" alt="">
-
                 </div>
             </div>
+            <div id="time"></div>
 
             <div id="wp-content">
                 <div id="sidebar">
@@ -810,6 +810,21 @@
             </footer>
         </div>
         <!-- kết thúc phần thân -->
-
+        <script>
+            function dongHo() {
+                var h=new Date().getHours();
+                var m=new Date().getMinutes();
+                var s=new Date().getSeconds();
+                if(h<10)
+                    h="0"+h;
+                if(m<10)
+                    m="0"+m;
+                if(s<10)
+                    s="0"+s;
+                document.getElementById('time').innerHTML=h+":"+m+":"+s;
+                setTimeout('dongHo()',1000);
+            }
+            dongHo();
+        </script>
     </body>
 </html>
